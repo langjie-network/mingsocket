@@ -1,0 +1,7 @@
+node_modules
+dist
+.DS_Store
+dist-ssr
+*.local
+.idea
+server/.ming_node_cacke

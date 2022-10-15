@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://minglie.gitee.io/mingpage/static/public/jsoneditor/jsoneditor.min.js"></script>
+    <link href="https://minglie.gitee.io/mingpage/static/public/jsoneditor/jsoneditor.min.css" rel="stylesheet">
+    <style>
+        #root{
+            display: flex;
+        }
+        #left,#right{
+            height: 100vh;
+            width: 50vw;
+        }
+    </style>
+</head>
+<body>
+
+<div id="root">
+        <div id="left"></div>
+        <div id="right"></div>
+</div>
+</body>
+</html>
+
+
+
+
+<script>
+
+
+    var jsonEditor1 = document.getElementById('left');;
+    var jsonOptions1 = {
+        mode: 'code',
+        modes: ['code', 'form', 'text', 'tree', 'view'],
+        onError: function(err) {
+
+        },
+        onChange(){
+
+        },
+    };
+    window.jsonEditorLeft = new JSONEditor(jsonEditor1, jsonOptions1, [] );
+
+
+
+    var jsonEditor2 = document.getElementById('right');;
+    var jsonOptions2 = {
+        mode: 'code',
+        modes: ['code', 'form', 'text', 'tree', 'view'],
+        onError: function(err) {
+
+        },
+        onChange(){
+
+        },
+    };
+    window.jsonEditorRight = new JSONEditor(jsonEditor2, jsonOptions2, [] );
+
+
+
+
+
+</script>

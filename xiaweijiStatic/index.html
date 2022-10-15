@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://weui.io/style/weui.css">
+    <script src="https://minglie.gitee.io/mingpage/static/public/weui/js/zepto.min.js"></script>
+    <script src="https://minglie.gitee.io/mingpage/static/public/weui/js/weui.min1.2.3.js"></script>
+    <script src="/ming_mock_vue.js"></script>
+    <script type="text/javascript" src="https://langjie.oss-cn-hangzhou.aliyuncs.com/space/root/project/viphelp/js/lib/vue3/vue@2.js"></script>
+    <script type="text/javascript" src="http://h5rsc.vipstatic.com/ams/element-ui@2.4.8.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://h5rsc.vipstatic.com/ams/element-ui@2.4.8.css"/>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/sortablejs@1.8.4/Sortable.min.js"></script>
+    <script src="https://minglie.gitee.io/mingpage/static/public/jsoneditor/jsoneditor.min.js"></script>
+    <script src="/ming_mock_vue.js"></script>
+    <script src="/config.js"></script>
+    <link href="https://minglie.gitee.io/mingpage/static/public/jsoneditor/jsoneditor.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>下位机</title>
+</head>
+<body>
+
+<div  v-cloak id="main" >
+        <div class="headBtnWrap">
+            <a  @click="tcpRequest" class="weui-btn weui-btn_primary"   href="javascript:">
+                <div class="weui-cell__bd ">
+                    <p>发送</p>
+                </div>
+            </a>
+            <a @click="statusChange" class="weui-btn weui-btn_primary"   href="javascript:">
+                <div class="weui-cell__bd">
+                    <p >{{btnStatusTxt}}</p>
+                </div>
+            </a>
+            <span class="TcStatusSpan" :style="{backgroundColor: tcStatusTxt=='离线'? 'red':'green'}">{{tcStatusTxt}}</span>
+        </div>
+       <div class="lrWrap">
+            <div class="lrWrapLeft">
+                <div class="leftHead">下位机发送</div>
+                <div id="left"></div>
+            </div>
+             <div class="lrWrapRight">
+                 <div class="rightHead">tcpClient连接列表</div>
+                 <el-table :data="tcpClientList" border row-key="id">
+                     <el-table-column width="200"  label="时间" prop="time"></el-table-column>
+                     <el-table-column width="200"  label="地址" prop="endPoint"></el-table-column>
+                 </el-table>
+             </div>
+       </div>
+       <hr/><hr/><hr/>
+       <div>
+           <div >上位机回复</div>
+           <el-table :data="list" border row-key="id">
+               <el-table-column width="200"  label="时间" prop="time"></el-table-column>
+               <el-table-column width="200"  label="地址" prop="remoteEndPoint"></el-table-column>
+               <el-table-column label="内容" prop="msg"></el-table-column>
+           </el-table>
+       </div>
+</div>
+</body>
+</html>
+
+
+
+
+<script src="/index.js" type="module" ></script>

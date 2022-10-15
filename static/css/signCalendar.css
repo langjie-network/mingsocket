@@ -1,0 +1,10 @@
+
+.signCalendar .canUpdateLi:hover{
+    background-color: rgb(227,227,228);
+    cursor: pointer;
+}
+
+
+.ant-form-item-children #lever_type{
+    display: flex !important;
+}

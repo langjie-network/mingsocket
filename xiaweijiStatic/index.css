@@ -1,0 +1,26 @@
+.weui-btn+.weui-btn{
+    margin-top: 0;
+}
+
+.lrWrap{
+    display: flex;
+}
+
+
+#left{
+    width: 40vw;
+}
+
+.headBtnWrap{
+    width: 70vw;
+    display: flex;
+    justify-content: left;
+    margin: 0;
+}
+
+
+.TcStatusSpan{
+    padding:1vw;
+    color: white;
+
+}

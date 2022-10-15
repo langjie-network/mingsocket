@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://langjie.oss-cn-hangzhou.aliyuncs.com/space/root/project/viphelp/js/jsoneditor.min.js"></script>
+    <link href="https://langjie.oss-cn-hangzhou.aliyuncs.com/space/root/project/viphelp/js/lib/jsoneditor.min.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #root{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+</body>
+</html>
+
+<script>
+    var jsonEditor1 = document.getElementById('root');;
+    var jsonOptions = {
+        mode: 'code',
+        modes: ['code', 'form', 'text', 'tree', 'view'],
+        onError: function(err) {
+
+        },
+        onChange(){
+            window.jsonEditor.myChange();
+        },
+    };
+    window.jsonEditor = new JSONEditor(jsonEditor1, jsonOptions, [] );
+    window.jsonEditor.myChange=v=>v;
+</script>

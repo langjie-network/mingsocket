@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上位机</title>
+    <script src="/lib/zepto.min.js"></script>
+<!--    <script src="https://gosspublic.alicdn.com/aliyun-oss-sdk-4.4.4.min.js"></script>-->
+    <script  src="/lib/react.production.min.js"></script>
+    <script  src="/lib/react-dom.production.min.js"></script>
+    <script src="/lib/moment.min.js"></script>
+    <script src="/lib/babel.min.js"></script>
+    <link rel="stylesheet" href="/lib/antd.min.css"/>
+    <link rel="stylesheet" href="/css/App.css"/>
+    <link rel="stylesheet" href="/css/table.css"/>
+    <script src="/lib/antd.min.js"></script>
+    <script src="/lib/react-router-dom.min.js"></script>
+    <script src="/lib/ming_mock/ming_mock_vue.js"></script>
+    <script src="/lib/ming_mock/SseWebPlugin.js"></script>
+    <script src="/config.js"></script>
+    <script src="/common.js"></script>
+    <script type="module" src="/controller/index.js"></script>
+    <script type="module" src="/cache/gloableCache.js"></script>
+</head>
+<body>
+<div id="root"></div>
+</div>
+
+<script>
+    const {Drawer,  Affix, Anchor, AutoComplete, Alert, Avatar, BackTop, Badge, Breadcrumb, Button, Calendar, Card, Collapse, Carousel, Cascader, Checkbox, Col, DatePicker, Divider, Dropdown, Form, Icon, Input, InputNumber, Layout, List, LocaleProvider, message, Menu, Modal, notification, Pagination, Popconfirm, Popover, Progress, Radio, Rate, Row, Select, Slider, Spin, Steps, Switch, Table, Transfer, Tree, TreeSelect, Tabs, Tag, TimePicker, Timeline, Tooltip, Mention, Upload, version } = antd;
+    const {Children,Component,Fragment,Profiler,PureComponent,StrictMode,Suspense,__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,cloneElement,createContext,createElement,createFactory,createRef,forwardRef,isValidElement,lazy,memo,useCallback,useContext,useDebugValue,useEffect,useImperativeHandle,useLayoutEffect,useMemo,useReducer,useRef,useState}=React;
+    const CheckboxGroup = Checkbox.Group;
+    const Option = Select.Option;
+    const FormItem = Form.Item;
+</script>
+
+<script src="/component/BaseTableList.jsx" type="text/babel"></script>
+
+<script src="/pages/TcpSocketClientCallForm.jsx" type="text/babel"></script>
+<script src="/pages/UdpSocketClientList.jsx" type="text/babel"></script>
+<script src="./pages/MiMsgList.jsx" type="text/babel"></script>
+<script src="/pages/MiHelp.jsx" type="text/babel"></script>
+
+<script src="/App.jsx" type="text/babel"></script>
+
+
+<script type="text/babel">
+    ReactDOM.render(
+            <div>
+                <App/>
+            </div>
+        ,
+        document.getElementById('root')
+    );
+</script>
+
+</body>
+</html>
+
+
+
+<!--<script src="https://minglie.gitee.io/mi/reload.js"></script>-->

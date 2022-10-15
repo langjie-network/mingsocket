@@ -1,0 +1,28 @@
+.ming_cursor_pointer:hover{
+    cursor: pointer;
+}
+.ming_cursor_pointer_not_allowed:hover{
+    cursor: not-allowed;
+}
+.ming_antd_table_foot{
+    transform: translateY(-3vw);
+}
+
+.MiApiInsAddDiv{
+    display: flex;
+    flex-flow: column;
+    width: 300px;
+}
+
+.logo {
+    height: 32px;
+    margin: 16px;
+}
+.avatarName{
+    margin-left: 5px;
+    color: white;
+}
+
+div .ant-layout-sider-trigger{
+    background-color: rebeccapurple;
+}
